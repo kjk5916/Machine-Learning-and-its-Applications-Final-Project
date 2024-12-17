@@ -17,3 +17,4 @@ Unsupervised Continual Learning에서는 forgetting을 방지하기 위해 주�
 
 이에 대한 결과는 다음과 같습니다.
 
+![image](https://github.com/user-attachments/assets/b743672f-8c61-48cc-842a-96a6c5b2fa1b)
