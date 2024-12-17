@@ -22,11 +22,11 @@ Finetuning: Distillation projector 없이 그냥 finetuning을 통해 unsupervis
 
 - PFR: 기존 논문에서 사용했던 2-layer MLP projector 입니다. layer당 dimension은 512-256-512 입니다.
 
-Wide-PFR: 2-layer projector에서 중간 layer의 dimension을 8배 높인 projector 입니다. 따라서 dimension은 512-2048-512 입니다.
+- Wide-PFR: 2-layer projector에서 중간 layer의 dimension을 8배 높인 projector 입니다. 따라서 dimension은 512-2048-512 입니다.
 
-Deep-PFR: 기존 pfr에서 layer depth를 5로 높인 projector 입니다. 따라서 dimension은 512-256-256-256-256-256-512 로 구성되어 있습니다.
+- Deep-PFR: 기존 pfr에서 layer depth를 5로 높인 projector 입니다. 따라서 dimension은 512-256-256-256-256-256-512 로 구성되어 있습니다.
 
-TPFR: MLP layer 대신 Vision Transformer Block을 이용해서 projector을 구성했습니다. 여기서 한가지 주목할 점은, transformer block은 mlp와 다르게 input 단에서 sequence length라는 새로운 dimension이 필요합니다. 이를 위해 기존에 사용되었던 ResNet18 encoder output에서 Global Average Pooling layer을 통과하기 전, size 25 by 25 by 512 input을 사용하였습니다. 즉, 25 by 25 feature map들을 각각 하나의 image patch로 보고, 512를 sequence dimension으로 본 것 입니다.
+- TPFR: MLP layer 대신 Vision Transformer Block을 이용해서 projector을 구성했습니다. 여기서 한가지 주목할 점은, transformer block은 mlp와 다르게 input 단에서 sequence length라는 새로운 dimension이 필요합니다. 이를 위해 기존에 사용되었던 ResNet18 encoder output에서 Global Average Pooling layer을 통과하기 전, size 25 by 25 by 512 input을 사용하였습니다. 즉, 25 by 25 feature map들을 각각 하나의 image patch로 보고, 512를 sequence dimension으로 본 것 입니다.
 
 ## Result:
 
@@ -42,7 +42,8 @@ TPFR: MLP layer 대신 Vision Transformer Block을 이용해서 projector을 구
 DATA_DIR=/path/to/data/dir/ CUDA_VISIBLE_DEVICES=0 python job_launcher.py --scu
 ```
 
-Code 돌리는 것에 대한 자세한 사항은 아래 github 링크를 통해 확인하실 수 있습니다!\\
+Code 돌리는 것에 대한 자세한 사항은 아래 github 링크를 통해 확인하실 수 있습니다!
+
 https://github.com/alviur/CVPR_PFR?tab=readme-ov-file
 
 감사합니다.
