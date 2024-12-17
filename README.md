@@ -40,5 +40,9 @@ TPFR: MLP layer 대신 Vision Transformer Block을 이용해서 projector을 구
 
 ```bash
 DATA_DIR=/path/to/data/dir/ CUDA_VISIBLE_DEVICES=0 python job_launcher.py --scu
+```
+
+자세한 사항은 아래 github 링크를 통해 확인하실 수 있습니다!
+https://github.com/alviur/CVPR_PFR?tab=readme-ov-file
 
 감사합니다.
