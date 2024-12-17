@@ -28,7 +28,7 @@ Deep-PFR: 기존 pfr에서 layer depth를 5로 높인 projector 입니다. 따�
 
 TPFR: MLP layer 대신 Vision Transformer Block을 이용해서 projector을 구성했습니다. 여기서 한가지 주목할 점은, transformer block은 mlp와 다르게 input 단에서 sequence length라는 새로운 dimension이 필요합니다. 이를 위해 기존에 사용되었던 ResNet18 encoder output에서 Global Average Pooling layer을 통과하기 전, size 25 by 25 by 512 input을 사용하였습니다. 즉, 25 by 25 feature map들을 각각 하나의 image patch로 보고, 512를 sequence dimension으로 본 것 입니다.
 
-# Result:
+## Result:
 
 ![image](https://github.com/user-attachments/assets/b743672f-8c61-48cc-842a-96a6c5b2fa1b)
 
