@@ -20,7 +20,7 @@ Proposed method에 대한 비교를 위해서 다음과 같은 모델들을 사�
 
 Finetuning: Distillation projector 없이 그냥 finetuning을 통해 unsupervised continual learning을 한 모델 입니다.
 
-PFR: 기존 논문에서 사용했던 2-layer MLP projector 입니다. layer당 dimension은 512-256-512 입니다.
+- PFR: 기존 논문에서 사용했던 2-layer MLP projector 입니다. layer당 dimension은 512-256-512 입니다.
 
 Wide-PFR: 2-layer projector에서 중간 layer의 dimension을 8배 높인 projector 입니다. 따라서 dimension은 512-2048-512 입니다.
 
@@ -42,7 +42,7 @@ TPFR: MLP layer 대신 Vision Transformer Block을 이용해서 projector을 구
 DATA_DIR=/path/to/data/dir/ CUDA_VISIBLE_DEVICES=0 python job_launcher.py --scu
 ```
 
-자세한 사항은 아래 github 링크를 통해 확인하실 수 있습니다!
+Code 돌리는 것에 대한 자세한 사항은 아래 github 링크를 통해 확인하실 수 있습니다!\\
 https://github.com/alviur/CVPR_PFR?tab=readme-ov-file
 
 감사합니다.
