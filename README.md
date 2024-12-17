@@ -14,6 +14,7 @@ https://leetcode.com/problemset
 
 ![image](https://github.com/user-attachments/assets/4c86ac34-2b2d-476e-86b6-54bcc4e3d720)
 
+
 # Final Project
 
 이번 프로젝트에서는, 제가 기존에 했던 Continual Learning 연구에 이어 Unsupervised Continual Learning에 대한 연구를 진행하였습니다. 구체적으로는, 아래 paper에서 제시한 method에서 projector network를 수정하여 unsupervised continual learning의 performance 향상을 시킬 수 있는가에 대해 알아보았습니다. 
